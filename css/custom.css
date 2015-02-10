@@ -1,0 +1,365 @@
+@font-face{
+    font-family:'Yekan';
+    src:url('../fonts/BYekan.eot');
+    src:url('../fonts/BYekan.eot#iefix') format('eot'),url('../fonts/BYekan.woff') format('woff'),url('../fonts/BYekan.ttf') format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+body{
+    font-family: 'Yekan' , sans-serif;
+    background-image: url("../images/cartographer.png");
+}
+a{
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    color: #fff;
+}
+a:hover{
+    text-decoration: none;
+    color: #999;
+}
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+header{
+    border-top: solid 5px #3c3c3b;
+    color: #eee;
+    min-height: 100px;
+    text-align: center;
+}
+nav{
+    text-align: center;
+    background-color: #3c3c3b;
+}
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px -1px 15px;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    font-size: 1.35em;
+
+}
+
+nav a:hover,
+nav a:focus {
+    outline: none;
+    color: #fff;
+}
+/* Effect 2: 3D rolling links, idea from http://hakim.se/thoughts/rolling-links */
+.cl-effect-2 a {
+    line-height: 44px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.cl-effect-2 a span {
+    position: relative;
+    display: inline-block;
+    padding: 0 14px;
+    background: #3c3c3b;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.csstransforms3d .cl-effect-2 a span::before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0e0e00;
+    content: attr(data-hover);
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    transition: background 0.3s;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
+
+.cl-effect-2 a:hover span,
+.cl-effect-2 a:focus span {
+    -webkit-transform: rotateX(90deg) translateY(-22px);
+    -moz-transform: rotateX(90deg) translateY(-22px);
+    transform: rotateX(90deg) translateY(-22px);
+}
+
+.csstransforms3d .cl-effect-2 a:hover span::before,
+.csstransforms3d .cl-effect-2 a:focus span::before {
+    background: #3c3c3b;
+}
+
+
+.main-menu{
+    padding: 0;
+    height: 100%;
+}
+.box{
+    
+    direction: rtl;
+    height: 100%;
+    margin-bottom: 10px;
+
+}
+.box ul{
+    padding-right: 0;
+}
+.box ul li{
+    padding: 10px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    border-bottom: solid 1px #3c3c3b;
+
+}
+.box ul li:hover{
+    padding-right: 20px;
+
+}
+.box ul li img{
+    margin-left: 10px;
+}
+
+.header-box{
+    background-color: #3c3c3b;
+    direction: rtl;
+    padding: 10px;
+    color: #9cff00;
+    text-shadow: 0 0 2px #9cff00;
+}
+
+article img{
+    width: 140px;
+    height: 220px;
+}
+
+.parallax{
+    background-image: url("../images/brand-store.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 350px;
+
+}
+.top-footer{
+    height: 64px;
+    background-color: #3c3c3b;
+}
+.top-footer ul li{
+    padding: 0;
+}
+.social{
+    display: inline-block;
+    width: 262px;
+    height: 64px;
+}
+.facebook{
+    background-image: url("../images/social/facebook_64x262-03.png");
+}
+.facebook:hover{
+    background-image: url("../images/social/facebook_white.png");
+}
+.facebook:focus{
+    background-image: url("../images/social/facebook_color.png");
+}
+.twitter{
+    background-image: url("../images/social/twitter_64x262-03.png");
+}
+.twitter:hover{
+    background-image: url("../images/social/twitter_white.png");
+}
+.twitter:focus{
+    background-image: url("../images/social/twitter_color.png");
+}
+.instagram{
+    background-image: url("../images/social/instagram_64x262-03.png");
+}
+.instagram:hover{
+    background-image: url("../images/social/instagram_white.png");
+}
+.instagram:focus{
+    background-image: url("../images/social/instagram_color.png");
+}
+footer{
+    
+    min-height: 300px;
+    border-bottom: solid 4px #0e0e00;
+}
+
+/* image hover effect */
+.grid {
+    position: relative;
+    clear: both;
+    margin: 0 auto;
+
+
+    list-style: none;
+    text-align: center;
+}
+
+/* Common style */
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+
+    min-width: 320px;
+
+
+    width: 100%;
+    height: auto;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.grid figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.grid figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+
+.grid figure h2 span {
+    font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+/*-----------------*/
+/***** Apollo *****/
+/*-----------------*/
+
+figure.effect-apollo {
+    background: #3498db;
+}
+
+figure.effect-apollo img {
+    opacity: 0.95;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.05,1.05,1);
+    transform: scale3d(1.05,1.05,1);
+}
+
+figure.effect-apollo figcaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+    content: '';
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+}
+
+figure.effect-apollo p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 3em;
+    padding: 0 1em;
+    max-width: 150px;
+    border-right: 4px solid #fff;
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+figure.effect-apollo h1 {
+    text-align: right;
+    color: #0e0e00;
+    text-shadow: 0 0 5px #eee;
+}
+
+figure.effect-apollo:hover img {
+    opacity: 0.6;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+
+figure.effect-apollo:hover figcaption::before {
+    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+}
+
+figure.effect-apollo:hover p {
+    opacity: 1;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
