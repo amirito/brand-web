@@ -13,7 +13,7 @@
 <title>ادمین</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/dashboard.css">
-
+<link rel="stylesheet" type="text/css" href="css/admin.css">
 </head>
 
 <body>
