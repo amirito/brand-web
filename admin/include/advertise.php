@@ -25,13 +25,3 @@ ON advertises.advertises_ID = advertiseimages.advertiseImages_AdvertiseID";
 
 ?>
 
-<div class="col-md-4">
-      <div class="view view-fifth">
-          <img src="images/advertise/sabz-meshki.jpg">
-          <div class="mask">
-              <h2>Hover Style #5</h2>
-              <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-              <a href="#" class="info">Read More</a>
-          </div>
-      </div>
-</div>

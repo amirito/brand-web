@@ -1,9 +1,11 @@
+<?php require_once('core/core.php'); ?>
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Rayweb</title>
+    <title>Brands</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
@@ -12,18 +14,21 @@
 </head>
 <body>
 <header>
-    <h1>Brands Store</h1>
+    <h1><a href="?Page=home">Brands Store</a></h1>
 </header>
 <section class="color-4">
-    <nav class="cl-effect-2">
-        <a href="#"><span data-hover="Ratatouille">Ratatouille</span></a>
-        <a href="#"><span data-hover="Lassitude">Lassitude</span></a>
-        <a href="#"><span data-hover="Murmurous">Murmurous</span></a>
-        <a href="#"><span data-hover="Palimpsest">Palimpsest</span></a>
-        <a href="#"><span data-hover="Assemblage">Assemblage</span></a>
+    <nav class="cl-effect-2" dir="rtl">
+        <a href="?page=home"><span data-hover="صفحه اصلی">صفحه اصلی</span></a>
+        <a href="#"><span data-hover="برندها">برندها</span></a>
+        <a href="#"><span data-hover="تخفیف ها">تخفیف ها</span></a>
+        <a href="#"><span data-hover="درباره ما">درباره ما</span></a>
+        <a href="#"><span data-hover="ارتباط با ما">ارتباط با ما</span></a>
     </nav>
 </section>
 <!-- slider -->
+<?php
+	if(!isset($_GET['page']) || (isset($_GET['page']) &&  $_GET['page'] == 'home') ){
+		echo '
 <section>
     <div id="pxs_container" class="pxs_container">
         <div class="pxs_bg">
@@ -56,7 +61,10 @@
         </div>
     </div>
 </section>
-
+			';
+	}
+	?>
+<!-- /slider -->
 <div class="clearfix"></div>
 
 <section class="main ">
@@ -87,28 +95,19 @@
 
     </div>
     <div class="col-md-9 main-menu">
-        <div class="box">
-
-            <div class="grid">
-                <figure class="effect-apollo">
-                    <img src="images/brand-store.jpg" alt="img18"/>
-                    <figcaption>
-                        <h1>فروشگاه ها</span></h1>
-                        <p>Apollo's last game of pool was so strange.</p>
-                        <a href="#">View more</a>
-                    </figcaption>
-                </figure>
-                <div class="clearfix"></div>
-                <figure class="effect-apollo">
-                    <img src="images/clothes3.jpg" alt="img22"/>
-                    <figcaption>
-                        <h1>محصولات</h1>
-                        <p>Apollo's last game of pool was so strange.</p>
-                        <a href="#">View more</a>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
+		<?php
+            if(isset($_GET['page'])){
+					if(is_file('include/'.$_GET['page'].'.php')){
+						include 'include/'.$_GET['page'].'.php';
+						}else{
+						die('صفحه مورد نظر وجود ندارد');
+						}
+					}else{
+						include 'include/home.php';
+						}
+         
+        ?>
+        
         <div class="clearfix"></div>
 
     </div>

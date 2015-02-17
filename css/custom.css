@@ -160,7 +160,7 @@ article img{
 }
 
 .parallax{
-    background-image: url("../images/brand-store.jpg");
+    background-image: url("../images/clothes2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -232,7 +232,7 @@ footer{
     min-width: 320px;
 
 
-    width: 100%;
+    width: 50%;
     height: auto;
     background: #3085a3;
     text-align: center;
